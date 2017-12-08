@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        tools:context=".AddPlayerActivity">
+
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Enter Player Name"
+            android:textSize="10sp"/>
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtName"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <RadioGroup
+                android:id="@+id/radioGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="MALE"/>
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FEMALE"/>
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnBirthdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout1"
+            android:text="Click to Add Birth Date"
+            android:textColor="@color/colorPrimary"/>
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnBirthdate"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"/>
+
+        <Spinner
+            android:id="@+id/spinnerCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerCategory"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"/>
+
+        <LinearLayout
+            android:id="@+id/layoutTestMatches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinnerCountry"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edtTestMatches"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/layout1"
+                android:layout_weight="1"
+                android:hint="Number Of Test Matches"
+                android:inputType="number"
+                android:textSize="10sp"/>
+
+            <EditText
+                android:id="@+id/edtOneDayMatches"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/layout1"
+                android:layout_weight="1"
+                android:hint="Number Of OneDay Matches"
+                android:inputType="number"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutCatches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutTestMatches"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edtCatches"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/layout1"
+                android:layout_weight="1"
+                android:hint="Number Of Catches"
+                android:textSize="10sp"/>
+
+            <EditText
+                android:id="@+id/edtRuns"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/layout1"
+                android:layout_weight="1"
+                android:hint="Number Of Runs"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutWickets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutCatches"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edtWickets"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/layout1"
+                android:layout_weight="1"
+                android:hint="Number Of Wickets"
+                android:textSize="10sp"/>
+
+            <EditText
+                android:id="@+id/edtStumping"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/layout1"
+                android:layout_weight="1"
+                android:hint="Number Of Stumping"
+                android:textSize="10sp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
